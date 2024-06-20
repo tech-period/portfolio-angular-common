@@ -25,7 +25,7 @@ jobs:
       run: npm ci
 
     - name: Build
-      run: ng build
+      run: ng build --base-href "https://tech-period.github.io/portfolio-angular-common/"
 
     - name: Upload
       uses: actions/upload-pages-artifact@v3
