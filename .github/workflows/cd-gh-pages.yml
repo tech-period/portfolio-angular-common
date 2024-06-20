@@ -25,7 +25,11 @@ jobs:
       run: npm ci
 
     - name: Build
-      run: ng build --base-href "https://tech-period.github.io/portfolio-angular-common/"
+      run: |
+          REPO=$GITHUB_REPOSITORY
+          OWNER=$(echo $REPO | cut -d / -f 1)
+          REPO_NAME=$(echo $REPO | cut -d / -f 2)
+          ng build --base-href "https://$OWNER.github.io/$REPO_NAME/"
 
     - name: Upload
       uses: actions/upload-pages-artifact@v3
