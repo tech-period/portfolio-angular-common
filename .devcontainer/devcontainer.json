@@ -1,0 +1,14 @@
+{
+    "name": "Pottfolio-angular-common",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "environment",
+    "workspaceFolder": "/workspace",
+    "postCreateCommand": "npm install",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "angular.ng-template"
+            ]
+        }
+    }
+}
