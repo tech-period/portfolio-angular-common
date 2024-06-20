@@ -30,7 +30,7 @@ jobs:
     - name: Upload
       uses: actions/upload-pages-artifact@v3
       with:
-        path: dist
+        path: dist/portfolio-angular-common/browser
 
   deploy:
     needs: build-and-upload
